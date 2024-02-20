@@ -8,7 +8,7 @@ namespace TasteFoodIt.Entities
 {
     public class OpenDayHour
     {
-        public int OpenDayHourıd { get; set; }
+        public int OpenDayHourId { get; set; }
 
         [StringLength(9)]
         [Required]
