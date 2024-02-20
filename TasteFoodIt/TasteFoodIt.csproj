@@ -125,6 +125,7 @@
     <Compile Include="Entities\Address.cs" />
     <Compile Include="Entities\Category.cs" />
     <Compile Include="Entities\Chef.cs" />
+    <Compile Include="Entities\Contact.cs" />
     <Compile Include="Entities\OpenDayHour.cs" />
     <Compile Include="Entities\Product.cs" />
     <Compile Include="Entities\Reservation.cs" />
