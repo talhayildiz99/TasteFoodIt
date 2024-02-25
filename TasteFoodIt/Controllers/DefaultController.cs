@@ -30,5 +30,9 @@ namespace TasteFoodIt.Controllers
             ViewBag.description = context.Adresses.Select(z => z.Description).FirstOrDefault();
             return PartialView();
         }
+        public PartialViewResult PartialNavbar()
+        {
+            return PartialView();
+        }
     }
 }
