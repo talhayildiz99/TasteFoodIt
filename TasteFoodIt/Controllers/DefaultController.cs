@@ -45,5 +45,10 @@ namespace TasteFoodIt.Controllers
             ViewBag.image = context.Abouts.Select(x => x.ImageUrl).FirstOrDefault();
             return PartialView();
         }
+        public PartialViewResult PartialMenu()
+        {
+            var values = context.Products.ToList();
+            return PartialView(values);
+        }
     }
 }
