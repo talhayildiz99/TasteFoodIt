@@ -19,5 +19,9 @@ namespace TasteFoodIt.Controllers
         {
             return PartialView();
         }
+        public PartialViewResult PartialScript()
+        {
+            return PartialView();
+        }
     }
 }
