@@ -23,5 +23,12 @@ namespace TasteFoodIt.Controllers
         {
             return PartialView();
         }
+        public PartialViewResult PartialNavbarInfo()
+        {
+            ViewBag.phone = context.Adresses.Select(x => x.Phone).FirstOrDefault();
+            ViewBag.email = context.Adresses.Select(y => y.Email).FirstOrDefault();
+            ViewBag.description = context.Adresses.Select(z => z.Description).FirstOrDefault();
+            return PartialView();
+        }
     }
 }
