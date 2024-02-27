@@ -131,9 +131,11 @@
     <Compile Include="Controllers\AdminLayoutController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\ErrorPageController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Entities\About.cs" />
     <Compile Include="Entities\Address.cs" />
+    <Compile Include="Entities\Admin.cs" />
     <Compile Include="Entities\Category.cs" />
     <Compile Include="Entities\Chef.cs" />
     <Compile Include="Entities\Contact.cs" />
@@ -143,6 +145,10 @@
     <Compile Include="Entities\Testimonial.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202402271902312_mig1.cs" />
+    <Compile Include="Migrations\202402271902312_mig1.designer.cs">
+      <DependentUpon>202402271902312_mig1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -169,6 +175,12 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Templates\colorlib-error-404-4\colorlib-error-404-4\css\style.css" />
+    <Content Include="Templates\colorlib-error-404-4\colorlib-error-404-4\index.html" />
+    <Content Include="Templates\colorlib-error-404-4\colorlib-error-404-4\readme.txt" />
+    <Content Include="Templates\colorlib-error-404-4\__MACOSX\colorlib-error-404-4\._index.html" />
+    <Content Include="Templates\colorlib-error-404-4\__MACOSX\colorlib-error-404-4\._readme.txt" />
+    <Content Include="Templates\colorlib-error-404-4\__MACOSX\colorlib-error-404-4\css\._style.css" />
     <Content Include="Templates\ruang-admin\.gitattributes" />
     <Content Include="Templates\ruang-admin\404.html" />
     <Content Include="Templates\ruang-admin\alerts.html" />
@@ -4767,6 +4779,9 @@
     <Content Include="Views\AdminLayout\PartialScript.cshtml" />
     <Content Include="Views\Category\CreateCategory.cshtml" />
     <Content Include="Views\Category\UpdateCategory.cshtml" />
+    <Content Include="Views\ErrorPage\Page404.cshtml" />
+    <Content Include="Templates\colorlib-error-404-4\__MACOSX\._colorlib-error-404-4" />
+    <Content Include="Templates\colorlib-error-404-4\__MACOSX\colorlib-error-404-4\._css" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -4787,6 +4802,11 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202402271902312_mig1.resx">
+      <DependentUpon>202402271902312_mig1.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
