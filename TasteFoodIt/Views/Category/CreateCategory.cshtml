@@ -1,5 +1,4 @@
-﻿@model TasteFoodIt.Entities.Category
-@{
+﻿﻿@{
     ViewBag.Title = "CreateCategory";
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
@@ -8,7 +7,7 @@
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">Kategori Ekleme Sayfası</h1>
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="./">Anasayfa</a></li>
+            <li class="breadcrumb-item"><a href="./">Ana Sayfa</a></li>
             <li class="breadcrumb-item">Kategoriler</li>
             <li class="breadcrumb-item active" aria-current="page">Kategori İşlemleri</li>
         </ol>
@@ -22,10 +21,10 @@
                     <h6 class="m-0 font-weight-bold text-primary">Ekleme Paneli</h6>
                 </div>
                 <div class="card-body">
-                    <form>
+                    <form method="post">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Kategori Adı</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            <label for="exampleInputCategory">Kategori Adı</label>
+                            <input type="text" class="form-control" name="CategoryName" id="exampleInputCategory" aria-describedby="emailHelp"
                                    placeholder="Kategori Adını Giriniz">
                         </div>
                         <button type="submit" class="btn btn-primary">Kategoriyi Ekle</button>
@@ -34,6 +33,4 @@
             </div>
         </div>
     </div>
-
 </div>
-
