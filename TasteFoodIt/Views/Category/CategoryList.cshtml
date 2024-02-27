@@ -39,8 +39,8 @@
                                     <td>@item.CategoryId</td>
                                     <td>@item.CategoryName</td>
                                     <td><a href="#" class="btn btn-sm btn-warning">Kategoriye Ait Ürünler</a></td>
-                                    <td><a href="#" class="btn btn-sm btn-danger">Sil</a></td>
-                                    <td><a href="#" class="btn btn-sm btn-success">Güncelle</a></td>
+                                    <td><a href="/Category/DeleteCategory/@item.CategoryId" class="btn btn-sm btn-danger">Sil</a></td>
+                                    <td><a href="/Category/UpdateCategory/@item.CategoryId" class="btn btn-sm btn-success">Güncelle</a></td>
                                 </tr>
                             }
                         </tbody>
