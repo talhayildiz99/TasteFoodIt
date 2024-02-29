@@ -129,6 +129,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Context\TasteContext.cs" />
     <Compile Include="Controllers\AdminAboutController.cs" />
+    <Compile Include="Controllers\AdminAddressController.cs" />
     <Compile Include="Controllers\AdminLayoutController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
@@ -4786,6 +4787,9 @@
     <Content Include="Views\AdminAbout\AboutList.cshtml" />
     <Content Include="Views\AdminAbout\CreateAbout.cshtml" />
     <Content Include="Views\AdminAbout\UpdateAbout.cshtml" />
+    <Content Include="Views\AdminAddress\AddressList.cshtml" />
+    <Content Include="Views\AdminAddress\CreateAddress.cshtml" />
+    <Content Include="Views\AdminAddress\UpdateAddress.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
