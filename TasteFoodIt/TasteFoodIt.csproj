@@ -130,6 +130,7 @@
     <Compile Include="Context\TasteContext.cs" />
     <Compile Include="Controllers\AdminAboutController.cs" />
     <Compile Include="Controllers\AdminAddressController.cs" />
+    <Compile Include="Controllers\AdminChefController.cs" />
     <Compile Include="Controllers\AdminLayoutController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
@@ -4800,6 +4801,9 @@
     <Content Include="Views\Product\CerateProduct.cshtml" />
     <Content Include="Views\Product\UpdateProduct.cshtml" />
     <Content Include="Views\Dashboard\Index.cshtml" />
+    <Content Include="Views\AdminChef\ChefList.cshtml" />
+    <Content Include="Views\AdminChef\CreateChef.cshtml" />
+    <Content Include="Views\AdminChef\UpdateChef.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

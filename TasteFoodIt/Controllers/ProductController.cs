@@ -16,6 +16,7 @@ namespace TasteFoodIt.Controllers
             var values = context.Products.ToList();
             return View(values);
         }
+
         [HttpGet]
         public ActionResult CerateProduct()
         {
@@ -28,6 +29,7 @@ namespace TasteFoodIt.Controllers
             ViewBag.v = values;
             return View();
         }
+
         [HttpPost]
         public ActionResult CerateProduct(Product product)
         {
