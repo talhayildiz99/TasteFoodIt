@@ -138,6 +138,7 @@
     <Compile Include="Controllers\AdminTestimonialController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\DetailController.cs" />
     <Compile Include="Controllers\ErrorPageController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\AdminProductController.cs" />
@@ -4814,6 +4815,12 @@
     <Content Include="Views\AdminTestimonial\UpdateTestimonial.cshtml" />
     <Content Include="Views\AdminReservation\ReservationList.cshtml" />
     <Content Include="Views\AdminReservation\UpdateReservation.cshtml" />
+    <Content Include="Views\Shared\DetailLayout.cshtml" />
+    <Content Include="Views\Detail\Chef.cshtml" />
+    <Content Include="Views\Detail\About.cshtml" />
+    <Content Include="Views\Detail\Menu.cshtml" />
+    <Content Include="Views\Detail\Reservation.cshtml" />
+    <Content Include="Views\Detail\Contact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
