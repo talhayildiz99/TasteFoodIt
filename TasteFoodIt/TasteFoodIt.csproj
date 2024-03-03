@@ -133,7 +133,7 @@
     <Compile Include="Controllers\AdminChefController.cs" />
     <Compile Include="Controllers\AdminContactController.cs" />
     <Compile Include="Controllers\AdminLayoutController.cs" />
-    <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\AdminCategoryController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\ErrorPageController.cs" />
@@ -2376,7 +2376,7 @@
     <Content Include="Views\Default\PartialInfo.cshtml" />
     <Content Include="Views\Default\PartialReservationNow.cshtml" />
     <Content Include="Views\AdminLayout\Index.cshtml" />
-    <Content Include="Views\Category\CategoryList.cshtml" />
+    <Content Include="Views\AdminCategory\CategoryList.cshtml" />
     <Content Include="Templates\ruang-admin\.git\COMMIT_EDITMSG" />
     <Content Include="Templates\ruang-admin\.git\config" />
     <Content Include="Templates\ruang-admin\.git\description" />
@@ -4787,8 +4787,8 @@
     <Content Include="Views\AdminLayout\PartialNavbar.cshtml" />
     <Content Include="Views\AdminLayout\PartialFooter.cshtml" />
     <Content Include="Views\AdminLayout\PartialScript.cshtml" />
-    <Content Include="Views\Category\CreateCategory.cshtml" />
-    <Content Include="Views\Category\UpdateCategory.cshtml" />
+    <Content Include="Views\AdminCategory\CreateCategory.cshtml" />
+    <Content Include="Views\AdminCategory\UpdateCategory.cshtml" />
     <Content Include="Views\ErrorPage\Page404.cshtml" />
     <Content Include="Templates\colorlib-error-404-4\__MACOSX\._colorlib-error-404-4" />
     <Content Include="Templates\colorlib-error-404-4\__MACOSX\colorlib-error-404-4\._css" />

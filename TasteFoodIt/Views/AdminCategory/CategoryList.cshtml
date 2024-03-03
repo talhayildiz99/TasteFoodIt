@@ -39,13 +39,13 @@
                                     <td>@item.CategoryId</td>
                                     <td>@item.CategoryName</td>
                                     <td><a href="#" class="btn btn-sm btn-warning">Kategoriye Ait Ürünler</a></td>
-                                    <td><a href="/Category/DeleteCategory/@item.CategoryId" class="btn btn-sm btn-danger">Sil</a></td>
-                                    <td><a href="/Category/UpdateCategory/@item.CategoryId" class="btn btn-sm btn-success">Güncelle</a></td>
+                                    <td><a href="/AdminCategory/DeleteCategory/@item.CategoryId" class="btn btn-sm btn-danger">Sil</a></td>
+                                    <td><a href="/AdminCategory/UpdateCategory/@item.CategoryId" class="btn btn-sm btn-success">Güncelle</a></td>
                                 </tr>
                             }
                         </tbody>
                     </table>
-                    <td><a href="#" class="btn btn-sm btn-primary">Yeni Kategori Girişi</a></td>
+                    <td><a href="/AdminCategory/CreateCategory/" class="btn btn-sm btn-primary">Yeni Kategori Girişi</a></td>
                 </div>
                 <div class="card-footer"></div>
             </div>
