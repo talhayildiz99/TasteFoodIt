@@ -52,7 +52,8 @@ namespace TasteFoodIt.Controllers
         }
         public PartialViewResult PartialTestimonial()
         {
-            return PartialView();
+            var testimonial = context.Testimonials.ToList();
+            return PartialView(testimonial);
         }
         public PartialViewResult PartialChef()
         {

@@ -2372,8 +2372,6 @@
     <Content Include="Views\Default\PartialNavbar.cshtml" />
     <Content Include="Views\Default\PartialSlider.cshtml" />
     <Content Include="Views\Default\PartialAbout.cshtml" />
-    <Content Include="Views\Default\PartialMenu.cshtml" />
-    <Content Include="Views\Default\PartialTestimonial.cshtml" />
     <Content Include="Views\Default\PartialChef.cshtml" />
     <Content Include="Views\Default\PartialFooter.cshtml" />
     <Content Include="Views\Default\PartialInfo.cshtml" />
@@ -4821,6 +4819,8 @@
     <Content Include="Views\Detail\Menu.cshtml" />
     <Content Include="Views\Detail\Reservation.cshtml" />
     <Content Include="Views\Detail\Contact.cshtml" />
+    <Content Include="Views\Default\PartialMenu.cshtml" />
+    <Content Include="Views\Default\PartialTestimonial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
