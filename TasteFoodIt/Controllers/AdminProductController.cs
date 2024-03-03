@@ -8,7 +8,7 @@ using TasteFoodIt.Entities;
 
 namespace TasteFoodIt.Controllers
 {
-    public class ProductController : Controller
+    public class AdminProductController : Controller
     {
         TasteContext context = new TasteContext();
         public ActionResult ProductList()
@@ -18,7 +18,7 @@ namespace TasteFoodIt.Controllers
         }
 
         [HttpGet]
-        public ActionResult CerateProduct()
+        public ActionResult CreateProduct()
         {
             List<SelectListItem> values = (from x in context.Categories.ToList()
                                            select new SelectListItem
@@ -31,7 +31,7 @@ namespace TasteFoodIt.Controllers
         }
 
         [HttpPost]
-        public ActionResult CerateProduct(Product product)
+        public ActionResult CreateProduct(Product product)
         {
             product.IsActive = true;
             context.Products.Add(product);

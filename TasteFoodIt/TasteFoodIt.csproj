@@ -138,7 +138,7 @@
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\ErrorPageController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\AdminProductController.cs" />
     <Compile Include="Entities\About.cs" />
     <Compile Include="Entities\Address.cs" />
     <Compile Include="Entities\Admin.cs" />
@@ -4798,9 +4798,9 @@
     <Content Include="Views\AdminAddress\AddressList.cshtml" />
     <Content Include="Views\AdminAddress\CreateAddress.cshtml" />
     <Content Include="Views\AdminAddress\UpdateAddress.cshtml" />
-    <Content Include="Views\Product\ProductList.cshtml" />
-    <Content Include="Views\Product\CerateProduct.cshtml" />
-    <Content Include="Views\Product\UpdateProduct.cshtml" />
+    <Content Include="Views\AdminProduct\ProductList.cshtml" />
+    <Content Include="Views\AdminProduct\CreateProduct.cshtml" />
+    <Content Include="Views\AdminProduct\UpdateProduct.cshtml" />
     <Content Include="Views\Dashboard\Index.cshtml" />
     <Content Include="Views\AdminChef\ChefList.cshtml" />
     <Content Include="Views\AdminChef\CreateChef.cshtml" />
