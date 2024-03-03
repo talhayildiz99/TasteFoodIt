@@ -51,6 +51,7 @@ namespace TasteFoodIt.Controllers
             var value = context.Testimonials.Find(Testimonial.TestimonialId);
             value.NameSurname = Testimonial.NameSurname;
             value.Title = Testimonial.Title;
+            value.Description = Testimonial.Description;
             value.ImageUrl = Testimonial.ImageUrl;
             context.SaveChanges();
             return RedirectToAction("TestimonialList");
