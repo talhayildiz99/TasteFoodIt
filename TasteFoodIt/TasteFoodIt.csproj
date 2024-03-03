@@ -131,6 +131,7 @@
     <Compile Include="Controllers\AdminAboutController.cs" />
     <Compile Include="Controllers\AdminAddressController.cs" />
     <Compile Include="Controllers\AdminChefController.cs" />
+    <Compile Include="Controllers\AdminContactController.cs" />
     <Compile Include="Controllers\AdminLayoutController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
@@ -4804,6 +4805,8 @@
     <Content Include="Views\AdminChef\ChefList.cshtml" />
     <Content Include="Views\AdminChef\CreateChef.cshtml" />
     <Content Include="Views\AdminChef\UpdateChef.cshtml" />
+    <Content Include="Views\AdminContact\ContactList.cshtml" />
+    <Content Include="Views\AdminContact\OpenMessage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,16 +1,15 @@
-﻿@model List<TasteFoodIt.Entities.Chef>
+﻿@model List<TasteFoodIt.Entities.Contact>
 @{
-    ViewBag.Title = "ChefList";
+    ViewBag.Title = "ContactList";
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
-
 <div class="container-fluid" id="container-wrapper">
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Şefler Listesi</h1>
+        <h1 class="h3 mb-0 text-gray-800">İletişim Listesi</h1>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="./">Anasayfa</a></li>
-            <li class="breadcrumb-item">Şefler</li>
-            <li class="breadcrumb-item active" aria-current="page">Şefler İşlemleri</li>
+            <li class="breadcrumb-item">İletişim</li>
+            <li class="breadcrumb-item active" aria-current="page">İletişim İşlemleri</li>
         </ol>
     </div>
     <div class="row">
@@ -18,15 +17,15 @@
             <!-- Simple Tables -->
             <div class="card">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Şefler</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">İletişim</h6>
                 </div>
                 @if (Model.Count == 0)
                 {
                     <div class="card-body">
                         <div class="alert alert-info" role="alert">
-                            <h4 class="alert-heading">Şefler kısmında bir veri bulunmamaktadır!</h4>
+                            <h4 class="alert-heading">İletişim kısmında bir veri bulunmamaktadır!</h4>
                         </div>
-                        <a href="#" class="btn btn-primary">Şefler Kısmına veri ekle</a>
+                        <a href="#" class="btn btn-primary">İletişim Kısmındaki Mesajları Oku</a>
                     </div>
                 }
                 else
@@ -41,7 +40,7 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                                 <h6><i class="fas fa-info"></i><b> Dikkat !</b></h6>
-                                Şefler Kısmı En Fazla 4 Veriden Oluşmalıdır!
+                                Okunmamış Mesajları Oku
                             </div>
                         </div>
                     </div>
@@ -51,37 +50,38 @@
                                 <tr>
                                     <th>*</th>
                                     <th>İsim Soyisim</th>
-                                    <th>Ünvan</th>
-                                    <th>Açıklama</th>
-                                    <th>Resim</th>
+                                    <th>Email</th>
+                                    <th>Konu</th>
+                                    <th>Mesaj</th>
+                                    <th>Tarih</th>
+                                    <th>Oku</th>
                                     <th>Sil</th>
-                                    <th>Güncelle</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach (var item in Model)
                                 {
                                     <tr>
-                                        <td><a href="#">@item.ChefId</a></td>
+                                        <td><a href="#">@item.ContactId</a></td>
                                         <td>@item.NameSurname</td>
-                                        <td>@item.Title</td>
-                                        <td>@item.Description</td>
-                                        <td>@item.ImageUrl</td>
-                                      
+                                        <td>@item.Email</td>
+                                        <td>@item.Subject</td>
+                                        <td>@item.Message</td>
+                                        <td>@item.SendDate</td>
                                         <td>
-                                            <a href="/AdminChef/DeleteChef/@item.ChefId" class="btn btn-danger btn-icon-split">
+                                            <a href="/AdminContact/OpenMessage/@item.ContactId" class="btn btn-success btn-icon-split">
                                                 <span class="icon text-white-50">
                                                     <i class="fas fa-trash"></i>
                                                 </span>
-                                                <span class="text">Sil</span>
+                                                <span class="text">Oku</span>
                                             </a>
                                         </td>
                                         <td>
-                                            <a href="/AdminChef/UpdateChef/@item.ChefId" class="btn btn-success btn-icon-split">
+                                            <a href="/AdminChef/DeleteContact/@item.ContactId" class="btn btn-danger btn-icon-split">
                                                 <span class="icon text-white-50">
                                                     <i class="fas fa-check"></i>
                                                 </span>
-                                                <span class="text">Güncelle</span>
+                                                <span class="text">Sil</span>
                                             </a>
                                         </td>
                                     </tr>
@@ -103,4 +103,3 @@
 
 
 </div>
-
