@@ -134,6 +134,8 @@
     <Compile Include="Controllers\AdminContactController.cs" />
     <Compile Include="Controllers\AdminLayoutController.cs" />
     <Compile Include="Controllers\AdminCategoryController.cs" />
+    <Compile Include="Controllers\AdminReservationController.cs" />
+    <Compile Include="Controllers\AdminTestimonialController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\ErrorPageController.cs" />
@@ -4807,6 +4809,9 @@
     <Content Include="Views\AdminChef\UpdateChef.cshtml" />
     <Content Include="Views\AdminContact\ContactList.cshtml" />
     <Content Include="Views\AdminContact\OpenMessage.cshtml" />
+    <Content Include="Views\AdminTestimonial\TestimonialList.cshtml" />
+    <Content Include="Views\AdminTestimonial\CreateTestimonial.cshtml" />
+    <Content Include="Views\AdminTestimonial\UpdateTestimonial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -4814,6 +4819,7 @@
     <Folder Include="Templates\ruang-admin\.git\objects\info\" />
     <Folder Include="Templates\ruang-admin\.git\objects\pack\" />
     <Folder Include="Templates\ruang-admin\.git\refs\tags\" />
+    <Folder Include="Views\AdminReservation\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
