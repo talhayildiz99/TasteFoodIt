@@ -24,6 +24,7 @@
                 <div class="card-body">
                     <form method="post">
                         <div class="form-group">
+                            @Html.HiddenFor(x => x.ChefId)
                             <label>İsim Soyisim</label>
                             @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control" })
                             <label>Ünvan</label>
