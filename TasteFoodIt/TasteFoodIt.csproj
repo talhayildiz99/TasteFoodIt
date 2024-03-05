@@ -4831,6 +4831,7 @@
     <Content Include="Views\Detail\Contact.cshtml" />
     <Content Include="Views\Default\PartialMenu.cshtml" />
     <Content Include="Views\Default\PartialTestimonial.cshtml" />
+    <Content Include="Views\AdminNotification\NotificationsList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -4838,7 +4839,6 @@
     <Folder Include="Templates\ruang-admin\.git\objects\info\" />
     <Folder Include="Templates\ruang-admin\.git\objects\pack\" />
     <Folder Include="Templates\ruang-admin\.git\refs\tags\" />
-    <Folder Include="Views\AdminNotification\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
