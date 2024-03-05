@@ -134,6 +134,7 @@
     <Compile Include="Controllers\AdminContactController.cs" />
     <Compile Include="Controllers\AdminLayoutController.cs" />
     <Compile Include="Controllers\AdminCategoryController.cs" />
+    <Compile Include="Controllers\AdminNotificationController.cs" />
     <Compile Include="Controllers\AdminReservationController.cs" />
     <Compile Include="Controllers\AdminTestimonialController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
@@ -4837,6 +4838,7 @@
     <Folder Include="Templates\ruang-admin\.git\objects\info\" />
     <Folder Include="Templates\ruang-admin\.git\objects\pack\" />
     <Folder Include="Templates\ruang-admin\.git\refs\tags\" />
+    <Folder Include="Views\AdminNotification\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

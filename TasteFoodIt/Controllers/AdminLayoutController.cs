@@ -25,6 +25,7 @@ namespace TasteFoodIt.Controllers
         }
         public PartialViewResult PartialNavbar()
         {
+            ViewBag.notificationIsReadByFalseCount = context.Notifications.Where(x => x.IsRead == false).Count();
             var values = context.Notifications.Where(X => X.IsRead == false).ToList();
             return PartialView(values);
         }
@@ -37,6 +38,14 @@ namespace TasteFoodIt.Controllers
         public PartialViewResult PartialScript()
         {
             return PartialView();
+        }
+
+        public ActionResult NotificationStatusChangeToTrue(int id)
+        {
+            var values = context.Notifications.Find(id);
+            values.IsRead = true;
+            context.SaveChanges();
+            return RedirectToAction("Index", "Dashboard");
         }
     }
 }
