@@ -12,5 +12,6 @@ namespace TasteFoodIt.Entities
         public string Description { get; set; }
         public bool IsRead { get; set; }
         public string NotificationIcon { get; set; }
+        public string IconCircleColor { get; set; }
     }
 }
