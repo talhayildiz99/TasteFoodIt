@@ -19,6 +19,7 @@ namespace TasteFoodIt.Context
         public DbSet<Reservation> Reservations { get; set; }
         public DbSet<Testimonial> Testimonials { get; set; }
         public DbSet<Admin> Admins { get; set; }
+        public DbSet<Notification> Notifications { get; set; }
         
 
     }
