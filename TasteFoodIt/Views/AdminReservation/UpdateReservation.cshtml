@@ -7,11 +7,11 @@
 
 <div class="container-fluid" id="container-wrapper">
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Rezervasyon Detay Sayfası</h1>
+        <h1 class="h3 mb-0 text-gray-800">@ViewBag.name Güncelleme Sayfası</h1>
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="./">Ana Sayfa</a></li>
-            <li class="breadcrumb-item">Rezervasyonlar</li>
-            <li class="breadcrumb-item active" aria-current="page">Rezervasyon İşlemleri</li>
+            <li class="breadcrumb-item"><a href="./">Anasayfa</a></li>
+            <li class="breadcrumb-item">@ViewBag.name</li>
+            <li class="breadcrumb-item active" aria-current="page">@ViewBag.name İşlemleri</li>
         </ol>
     </div>
 
@@ -20,36 +20,130 @@
             <!-- Form Basic -->
             <div class="card mb-4">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Rezervasyon Deatylar Paneli</h6>
+                    <h6 class="m-0 font-weight-bold text-dark">@ViewBag.name Güncelleme Paneli</h6>
                 </div>
                 <div class="card-body">
                     <form method="post">
-                        <div class="form-group">
+                        <div class="row justify-content-center">
                             @Html.HiddenFor(x => x.ReservationId)
-                            <label>İsim</label>
-                            @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
-                            <br />
-                            <label>Email</label>
-                            @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
-                            <br />
-                            <label>Telefon</label>
-                            @Html.TextBoxFor(x => x.PhoneNumber, new { @class = "form-control" })
-                            <br />
-                            <label>Tarih</label>
-                            @Html.TextBoxFor(x => x.ReservationDate, new { @class = "form-control" })
-                            <br />
-                            <label>Zaman</label>
-                            @Html.TextBoxFor(x => x.Time, new { @class = "form-control" })
-                            <br />
-                            <label>Aktif Mi</label>
-                            @Html.TextBoxFor(x => x.ReservationStatus, new { @class = "form-control" })
-                            <br />
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleCategory">İsim</label>
+                                    <div class="input-group clockpicker" id="clockPicker1">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text bg-dark"><i class="fas fa-user"></i></span>
+                                        </div>
+                                        @Html.TextBoxFor(x => x.Name, new { @class = "form-control", @disabled = "disabled" })
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleCategory">Email</label>
+                                    <div class="input-group date">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text bg-dark"><i class="fas fa-mail-bulk"></i></span>
+                                        </div>
+                                        @Html.TextBoxFor(x => x.Email, new { @class = "form-control", @disabled = "disabled" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleCategory">Tarih</label>
+                                    <div class="input-group date">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text bg-dark"><i class="fas fa-calendar"></i></span>
+                                        </div>
+                                        @Html.TextBoxFor(x => x.ReservationDate, new { @class = "form-control", @disabled = "disabled" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleCategory">Telefon</label>
+                                    <div class="input-group clockpicker" id="clockPicker1">
+
+                                        @Html.TextBoxFor(x => x.PhoneNumber, new { @class = "form-control", @disabled = "disabled" })
+                                        <div class="input-group-append">
+                                            <span class="input-group-text bg-dark"><i class="fas fa-phone"></i></span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleCategory">Kişi Sayısı</label>
+                                    <div class="input-group clockpicker" id="clockPicker1">
+                                        @Html.TextBoxFor(x => x.GuestCount, new { @class = "form-control", @disabled = "disabled" })
+                                        <div class="input-group-append">
+                                            <span class="input-group-text bg-dark"><i class="fas fa-users"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleCategory">Saat</label>
+                                    <div class="input-group clockpicker" id="clockPicker1">
+                                        @Html.TextBoxFor(x => x.Time, new { @class = "form-control", @disabled = "disabled" })
+                                        <div class="input-group-append">
+                                            <span class="input-group-text bg-dark"><i class="fas fa-clock"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <label class="col-md-12 text-danger text-lg-center">Rezarvasyon Durumu</label>
+                            </div>
+                            <div class="container">
+                                <div class="row no-gutters">
+                                    <div class="col-sm-12 p-4 p-md-5 d-flex align-items-center justify-content-center bg-gradient-dark">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <div class="custom-control custom-radio">
+                                                    <input type="radio" id="Aktif" name="ReservationStatus" value="Rezervasyon Alındı" class="custom-control-input" @(Model.ReservationStatus == "Rezervasyon Alındı" ? "checked" : "")>
+                                                    <label style="color:white" class="custom-control-label" for="Aktif">Rezervasyon Alındı</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <div class="custom-control custom-radio">
+                                                    <input type="radio" id="onaylandı" name="ReservationStatus" value="Onaylandı" class="custom-control-input" @(Model.ReservationStatus == "Onaylandı" ? "checked" : "")>
+                                                    <label style="color:white" class="custom-control-label" for="onaylandı">Rezervasyon Onaylandı</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <div class="custom-control custom-radio">
+                                                    <input type="radio" id="Pasif" name="ReservationStatus" value="İptal Edildi" class="custom-control-input" @(Model.ReservationStatus == "İptal Edildi" ? "checked" : "")>
+                                                    <label style="color:white" class="custom-control-label" for="Pasif"> Rezervasyon İptal Edildi</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <button type="submit" class="btn btn-outline-success mb-1">Kaydet</button>
+                        <br /><br />
+                        <div class="text-center">
+
+                            <button type="submit" style="color:white" class="btn bg-gradient-warning col-lg-4">Rezervasyon Durumunu Değiştir</button>
+                        </div>
+
+
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
-

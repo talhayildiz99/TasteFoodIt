@@ -7,11 +7,11 @@
 
 <div class="container-fluid" id="container-wrapper">
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Rezervsyonlar Listesi</h1>
+        <h1 class="h3 mb-0 text-gray-800">@ViewBag.name Listesi</h1>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="./">Anasayfa</a></li>
-            <li class="breadcrumb-item">Rezervsyonlar</li>
-            <li class="breadcrumb-item active" aria-current="page">Rezervsyon İşlemleri</li>
+            <li class="breadcrumb-item">@ViewBag.name</li>
+            <li class="breadcrumb-item active" aria-current="page">@ViewBag.name İşlemleri</li>
         </ol>
     </div>
     <div class="row">
@@ -19,85 +19,83 @@
             <!-- Simple Tables -->
             <div class="card">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Rezervsyonlar</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">@ViewBag.name Tablosu</h6>
                 </div>
-                @if (Model.Count == 0)
-                {
-                    <div class="card-body">
-                        <div class="alert alert-info" role="alert">
-                            <h4 class="alert-heading">Rezervsyonlar kısmında bir veri bulunmamaktadır!</h4>
-                        </div>
-                        <a href="#" class="btn btn-primary">Rezervsyonlar Kısmındaki Verileri Kontrol Et</a>
-                    </div>
-                }
-                else
-                {
-                    <div class="card mb-4">
-                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                            <h6 class="m-0 font-weight-bold text-primary">Uyarı</h6>
-                        </div>
-                        <div class="card-body">
-                            <div class="alert alert-info alert-dismissible" role="alert">
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                                <h6><i class="fas fa-info"></i><b> Dikkat !</b></h6>
-                                Rezervsyon Durumunu Kontrol Et
-                            </div>
-                        </div>
-                    </div>
-                    <div class="table-responsive">
-                        <table class="table align-items-center table-flush">
-                            <thead class="thead-light">
+                <div class="table-responsive">
+                    <table class="table align-items-center table-flush">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>*</th>
+                                <th>Adı</th>
+                                <th>Telefon No</th>
+                                <th>Email</th>
+                                <th>Durum</th>
+                                <th>Sil</th>
+                                <th>Onayla</th>
+                                <th>Güncelle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
                                 <tr>
-                                    <th>*</th>
-                                    <th>İsim Soyisim</th>
-                                    <th>Email</th>
-                                    <th>Telefon</th>
-                                    <th>Rezervasyon Tarihi</th>
-                                    <th>Zaman</th>
-                                    <th>Aktif Mi ?</th>
-                                    <th>Detaylar</th>
-                                    <th>Sil</th>
+                                    <td><a href="#">@item.ReservationId</a></td>
+                                    <td>@item.Name</td>
+                                    <td>@item.PhoneNumber</td>
+                                    <td>@item.Email</td>
+                                    @if (item.ReservationStatus == "Onaylandı")
+                                    {
+                                        <td>
+                                            <span class="badge badge-success">@item.ReservationStatus</span>
+                                        </td>
+                                    }
+                                    @if (item.ReservationStatus == "Rezervasyon Alındı")
+                                    {
+                                        <td>
+                                            <span class="badge badge-primary">@item.ReservationStatus</span>
+                                        </td>
+                                    }
+                                    @if (item.ReservationStatus == "İptal Edildi")
+                                    {
+                                        <td>
+                                            <span class="badge badge-danger">@item.ReservationStatus</span>
+                                        </td>
+                                    }
+
+                                    <td>
+                                        <a href="/AdminReservation/DeleteReservation/@item.ReservationId" class="btn btn-danger btn-icon-split">
+                                            <span class="icon text-white-50">
+                                                <i class="fas fa-trash"></i>
+                                            </span>
+                                            <span class="text">İptal </span>
+                                        </a>
+
+                                    </td>
+                                    <td>
+                                        <a href="/AdminReservation/ReservationAccept/@item.ReservationId" class="btn btn-success btn-icon-split">
+                                            <span class="icon text-white-50">
+                                                <i class="fas fa-check"></i>
+                                            </span>
+                                            <span class="text">Onayla</span>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="/AdminReservation/UpdateReservation/@item.ReservationId" class="btn btn-info btn-icon-split">
+                                            <span class="icon text-white-50">
+                                                <i class="fas fa-info-circle"></i>
+                                            </span>
+                                            <span class="text">Detaylar</span>
+                                        </a>
+                                    </td>
                                 </tr>
-                            </thead>
-                            <tbody>
-                                @foreach (var item in Model)
-                                {
-                                    <tr>
-                                        <td><a href="#">@item.ReservationId</a></td>
-                                        <td>@item.Name</td>
-                                        <td>@item.Email</td>
-                                        <td>@item.PhoneNumber</td>
-                                        <td>@item.ReservationDate</td>
-                                        <td>@item.Time</td>
-                                        <td>@item.ReservationStatus</td>
-                                        <td>
-                                            <a href="/AdminContact/OpenMessage/@item.ReservationId" class="btn btn-success btn-icon-split">
-                                                <span class="icon text-white-50">
-                                                    <i class="fas fa-trash"></i>
-                                                </span>
-                                                <span class="text">Detayları Gör ve Güncelle</span>
-                                            </a>
-                                        </td>
-                                        <td>
-                                            <a href="/AdminChef/DeleteContact/@item.ReservationId" class="btn btn-danger btn-icon-split">
-                                                <span class="icon text-white-50">
-                                                    <i class="fas fa-check"></i>
-                                                </span>
-                                                <span class="text">İptal Et</span>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                }
+                            }
 
 
-                            </tbody>
-                        </table>
-                        <td><a href="/AdminReservation/CreateReservation/" class="btn btn-sm btn-primary">Yeni Rezervasyon Girişi</a></td>
-                    </div>
-                }
+                        </tbody>
+                    </table>
 
+
+                </div>
                 <div class="card-footer"></div>
             </div>
         </div>
@@ -107,4 +105,3 @@
 
 
 </div>
-
