@@ -72,5 +72,20 @@ namespace TasteFoodIt.Controllers
         {
             return PartialView();
         }
+
+        [HttpGet]
+        public PartialViewResult PartialReservation()
+        {
+            return PartialView();
+        }
+        [HttpPost]
+        public ActionResult PartialReservation(Reservation p)
+        {
+            context.Reservations.Add(p);
+            var value = context.Reservations.Find(p.ReservationId);
+            value.ReservationStatus = "Rezervasyon Alındı";
+            context.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
