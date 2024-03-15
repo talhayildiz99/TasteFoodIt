@@ -137,6 +137,7 @@
     <Compile Include="Controllers\AdminNotificationController.cs" />
     <Compile Include="Controllers\AdminReservationController.cs" />
     <Compile Include="Controllers\AdminSliderController.cs" />
+    <Compile Include="Controllers\AdminSocialMediaController.cs" />
     <Compile Include="Controllers\AdminTestimonialController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
@@ -4848,6 +4849,9 @@
     <Content Include="Views\AdminSlider\SliderList.cshtml" />
     <Content Include="Views\AdminSlider\CreateSlider.cshtml" />
     <Content Include="Views\AdminSlider\UpdateSlider.cshtml" />
+    <Content Include="Views\AdminSocialMedia\SocialMediaList.cshtml" />
+    <Content Include="Views\AdminSocialMedia\CreateSocialMedia.cshtml" />
+    <Content Include="Views\AdminSocialMedia\UpdateSocialMedia.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
