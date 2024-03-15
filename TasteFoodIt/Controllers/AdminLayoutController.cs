@@ -40,6 +40,13 @@ namespace TasteFoodIt.Controllers
             return PartialView();
         }
 
+        public PartialViewResult PartialMessage()
+        {
+
+            ViewBag.contactIsreadByFalseCount = context.Contacts.Where(x => x.IsRead == false).Count();
+            var value = context.Contacts.Where(x => x.IsRead == false).ToList();
+            return PartialView(value);
+        }
         public ActionResult NotificationStatusChangeToTrue(int id)
         {
             var values = context.Notifications.Find(id);
