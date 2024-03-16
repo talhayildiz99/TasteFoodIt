@@ -28,19 +28,14 @@
                             <label>Restorant İsmi</label>
                             @Html.TextBoxFor(x => x.ResturantName, new { @class = "form-control" })
 
-                            <label>Başlık 1</label>
+                            <label>Başlık</label>
                             @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
 
-                            <label>Başlık 2</label>
+                            <label>Açıklama</label>
                             @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
 
-                            <label for="exampleCategory"> Fotoğraf</label>
-                            <div class="form-group">
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="customFile" name="ImageUrl" onchange="updateFileName(this)">
-                                    <label class="custom-file-label" for="customFile">Seç</label>
-                                </div>
-                            </div>
+                            <label>Resim URL</label>
+                            @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
 
                         </div>
                         <button type="submit" class="btn btn-outline-success mb-1">Ekle</button>
