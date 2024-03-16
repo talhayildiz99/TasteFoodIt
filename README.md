@@ -6,7 +6,7 @@ Projede bir Admin Paneli ve bir Kullanıcı Arayüzü bulunömaktadır.
 Tüm CRUD işlemlerini yapıp yönetebildiğimiz bir yapı bizi karşılar.
 
 #### Kullanıcı Arayüzünde;
-Oluşturmuş olduğum portfolyome dair bilgilerle birlikte CV'mi indirebileceğiniz, bana mesaj yollayarak görüşlerinizi belirtebileceğiniz alanlar bulunmaktadır.
+Bir restorana ait websitesi olarak hazırlanan TasteFoodIt projesinde şık bir tasarım ile ziyaretçilere restoran hakkında bilgi vererek, rezervasyon-iletişim-menü gibi kreatif arayüzler sağlamaktadır.
 
 #### Kullanılan Teknolojiler
 - Asp.Net Framework (C#)
