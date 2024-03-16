@@ -56,10 +56,7 @@ namespace TasteFoodIt.Controllers
             value.Title = Slider.Title;
             value.Description = Slider.Description;
             value.ResturantName = Slider.ResturantName;
-            if (Slider.ImageUrl != null)
-            {
-                value.ImageUrl = "/Templates/tasteit-master/images/" + Slider.ImageUrl;
-            }
+            value.ImageUrl = Slider.ImageUrl;
 
             context.SaveChanges();
             return RedirectToAction("SliderList");

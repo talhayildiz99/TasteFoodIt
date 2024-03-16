@@ -36,7 +36,8 @@ namespace TasteFoodIt.Controllers
         }
         public PartialViewResult PartialSlider()
         {
-            return PartialView();
+            var value = context.Sliders.ToList();
+            return PartialView(value);
         }
         public PartialViewResult PartialAbout()
         {

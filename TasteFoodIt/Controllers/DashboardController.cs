@@ -19,5 +19,6 @@ namespace TasteFoodIt.Controllers
             ViewBag.v4 = context.Reservations.Where(x => x.ReservationStatus == "Aktif").Count();
             return View();
         }
+
     }
 }

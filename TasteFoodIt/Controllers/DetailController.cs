@@ -15,6 +15,10 @@ namespace TasteFoodIt.Controllers
         public ActionResult About()
         {
             ViewBag.pageName = "Hakkımızda";
+            ViewBag.reservationCount = context.Reservations.Count();
+            ViewBag.chefsCount = context.Chefs.Count();
+            ViewBag.productCount = context.Products.Count();
+            ViewBag.testimonialCount = context.Testimonials.Count();
             return View();
         }
 
